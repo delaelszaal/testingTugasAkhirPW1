@@ -1,0 +1,138 @@
+:root {
+    --primary-navy: #0f172a;
+    --secondary-navy: #1e293b;
+    --accent-blue: #2563eb;
+    --accent-gold: #d97706;
+    --soft-bg: #f8fafc;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--soft-bg);
+    color: #1e293b;
+}
+
+.text-primary-dark { color: var(--primary-navy); }
+.text-accent { color: var(--accent-blue); }
+
+.brand-icon {
+    width: 38px;
+    height: 38px;
+    background: linear-gradient(135deg, var(--accent-blue), #1d4ed8);
+}
+
+.active-nav {
+    background-color: #eff6ff !important;
+    color: var(--accent-blue) !important;
+    font-weight: 700 !important;
+}
+
+.btn-accent {
+    background: linear-gradient(135deg, var(--accent-blue), #1d4ed8);
+    color: #fff;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.btn-accent:hover {
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3) !important;
+}
+
+/* Modern Hero Banner */
+.hero-modern {
+    background: linear-gradient(135deg, rgba(15, 23, 42, 0.88), rgba(30, 58, 138, 0.82)),
+                url('https://tse3.mm.bing.net/th/id/OIP.3w9jR_gxfyzCgHd0bw8rwwHaEI?r=0&rs=1&pid=ImgDetMain&o=7&rm=3') center/cover no-repeat;
+    min-height: 380px;
+    padding: 70px 0 110px;
+    color: #ffffff;
+}
+
+/* Floating Quick Search Card */
+.quick-search-wrapper {
+    margin-top: -65px;
+    margin-bottom: 50px;
+    position: relative;
+    z-index: 10;
+}
+
+.quick-search-card {
+    background: #ffffff;
+    border-radius: 20px;
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+}
+
+/* Modern Room Card (Mockup 02) */
+.room-card-modern {
+    background: #ffffff;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    overflow: hidden;
+    transition: all 0.25s ease;
+}
+.room-card-modern:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
+    border-color: #cbd5e1;
+}
+.room-card-img {
+    height: 185px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Kalender Interaktif (Mockup 03) */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 10px;
+}
+.calendar-day-header {
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #64748b;
+    padding-bottom: 6px;
+}
+.calendar-cell {
+    aspect-ratio: 1 / 1;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.calendar-cell:hover {
+    background-color: #eff6ff;
+    border-color: var(--accent-blue);
+    color: var(--accent-blue);
+}
+.calendar-cell.active-date {
+    background: linear-gradient(135deg, var(--accent-blue), #1d4ed8);
+    color: #ffffff;
+    border-color: transparent;
+    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
+}
+.dot-indicator {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-top: 4px;
+}
+
+/* Login Background (Mockup Register.png) */
+.auth-section {
+    min-height: calc(100vh - 140px);
+    background: radial-gradient(circle at top right, #dbeafe, #f8fafc 60%);
+}
+
+.footer-modern {
+    background-color: #0f172a;
+}
+
