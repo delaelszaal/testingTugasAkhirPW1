@@ -27,17 +27,6 @@ body {
     font-weight: 700 !important;
 }
 
-.btn-accent {
-    background: linear-gradient(135deg, var(--accent-blue), #1d4ed8);
-    color: #fff;
-    border: none;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.btn-accent:hover {
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3) !important;
-}
 
 /* Modern Hero Banner */
 .hero-modern {
@@ -58,12 +47,12 @@ body {
 
 .quick-search-card {
     background: #ffffff;
-    border-radius: 20px;
+    border-radius: 10px;
     border: 1px solid rgba(226, 232, 240, 0.9);
     box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
 }
 
-/* Modern Room Card (Mockup 02) */
+/* CARD */
 .room-card-modern {
     background: #ffffff;
     border-radius: 16px;
@@ -71,11 +60,7 @@ body {
     overflow: hidden;
     transition: all 0.25s ease;
 }
-.room-card-modern:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 16px 32px rgba(15, 23, 42, 0.1);
-    border-color: #cbd5e1;
-}
+
 .room-card-img {
     height: 185px;
     object-fit: cover;
@@ -111,13 +96,11 @@ body {
 .calendar-cell:hover {
     background-color: #eff6ff;
     border-color: var(--accent-blue);
-    color: var(--accent-blue);
 }
 .calendar-cell.active-date {
-    background: linear-gradient(135deg, var(--accent-blue), #1d4ed8);
+    background: var(--accent-blue);
     color: #ffffff;
     border-color: transparent;
-    box-shadow: 0 6px 15px rgba(37, 99, 235, 0.3);
 }
 .dot-indicator {
     width: 6px;
@@ -126,10 +109,8 @@ body {
     margin-top: 4px;
 }
 
-/* Login Background (Mockup Register.png) */
+/* LOGIN */
 .auth-section {
-    min-height: calc(100vh - 140px);
-    background: radial-gradient(circle at top right, #dbeafe, #f8fafc 60%);
 }
 
 .footer-modern {

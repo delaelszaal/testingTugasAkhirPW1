@@ -8,10 +8,9 @@ $currentPage = isset($_GET['page']) ? $_GET['page'] : 'home';
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Room Booking - GKI Raya Hankam</title>
-    <!-- Google Fonts: Plus Jakarta Sans -->
-    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap Icons -->
@@ -25,7 +24,6 @@ $currentPage = isset($_GET['page']) ? $_GET['page'] : 'home';
     <!-- Navbar Global -->
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <i class="bi bi-search fs-5 text-accent "></i>
             <a class="navbar-brand ms-2" href="index.php"><strong>GKI Raya Hankam</strong></a>
 
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,7 +50,7 @@ $currentPage = isset($_GET['page']) ? $_GET['page'] : 'home';
                         <a class="nav-link <?php echo ($currentPage == 'login') ? 'active fw-semibold' : ''; ?>" href="index.php?page=login">Login</a>
                     </li>
                 </ul>
-                <a href="index.php?page=booking" class="btn btn-accent  ms-lg-4">
+                <a href="index.php?page=booking" class="btn btn-primary  ms-lg-4">
                     + Booking Sekarang
                 </a>
             </div>

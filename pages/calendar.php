@@ -3,7 +3,7 @@
     <div class="bg-white p-3 p-md-4 rounded-4 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
         <div class="d-flex align-items-center gap-3">
             <div class="brand-icon rounded-circle d-flex align-items-center justify-content-center text-white">
-                <i class="bi bi-calendar2-week"></i>
+                <i class="bi bi-calendar"></i>
             </div>
             <div>
                 <nav aria-label="breadcrumb">
@@ -12,10 +12,10 @@
                         <li class="breadcrumb-item active">Kalender</li>
                     </ol>
                 </nav>
-                <h5 class="fw-bold mb-0">Sistem Peminjaman Ruangan</h5>
+                <h5 class="fw-bold mb-0">Cek Availbility</h5>
             </div>
         </div>
-        <a href="index.php?page=booking" class="btn btn-accent btn-sm rounded-pill px-3 py-2 fw-semibold">
+        <a href="index.php?page=booking" class="btn btn-primary btn-sm rounded-pill px-3 py-2 fw-semibold">
             <i class="bi bi-plus-circle me-1"></i>Ajukan Peminjaman
         </a>
 

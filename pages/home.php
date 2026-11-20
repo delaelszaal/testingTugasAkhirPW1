@@ -1,26 +1,26 @@
-<!-- Hero Banner dengan Background Foto & Overlay Navy -->
+<!-- BANNER BACKGROUND -->
 <section class="hero-modern d-flex align-items-center text-center">
     <div class="container">
-
-        <h2 class="fw-normal fs-4 text-white-50 mb-2">Selamat Datang di Sistem Booking Ruangan</h2>
-        <h1 class="fw-extrabold display-5 mb-3">Room Booking GKI RAYA HANKAM</h1>
+        <h2 class="fw-normal fs-4 text-white-50 mb-2">Sistem Booking Ruangan</h2>
+        <h1 class="fw-extrabold display-5 mb-3">GKI RAYA HANKAM</h1>
         <p class="lead text-white-50 mx-auto" style="max-width: 650px;">
             Cek jadwal pemakaian fasilitas gereja secara real-time dan ajukan peminjaman ruang rapat, ibadah komisi, maupun studio musik dengan mudah.
         </p>
     </div>
 </section>
 
+
 <!-- CONTAINER QUICKSEARCH -->
 <section class="container quick-search-wrapper">
-    <div class="quick-search-card p-4 p-md-5 mx-auto" style="max-width: 980px;">
+    <div class="quick-search-card p-4  mx-auto" style="max-width: 800px;">
         <div class="d-flex align-items-center gap-2 mb-3 text-primary-dark">
             <i class="bi bi-search fs-5 text-accent"></i>
             <h5 class="fw-bold mb-0">Cek Ruangan</h5>
         </div>
         <form id="quickCheckForm" class="row g-3 align-items-end">
-            <div class="col-md-5">
+            <div class="col-md-4">
                 <label class="form-label fw-semibold text-secondary small">TANGGAL PEMINJAMAN</label>
-                <div class="input-group input-group-lg">
+                <div class="input-group input-group-m">
                     <span class="input-group-text bg-light border-end-0"><i class="bi bi-calendar-event text-accent"></i></span>
                     <input type="date" id="tglBook" class="form-control bg-light border-start-0" required>
                 </div>
@@ -28,7 +28,7 @@
 
             <div class="col-md-5">
                 <label class="form-label fw-semibold text-secondary small">PILIH RUANGAN</label>
-                <div class="input-group input-group-lg">
+                <div class="input-group input-group-m">
                     <span class="input-group-text bg-light border-end-0"><i class="bi bi-door-open text-accent"></i></span>
                     <select id="ruangBook" class="form-select bg-light border-start-0" required>
                         <option value="">-- Pilih Ruangan --</option>
@@ -38,9 +38,9 @@
                     </select>
                 </div>
             </div>
-            <div class="col-md-2 d-grid">
-                <button type="submit" class="btn btn-accent btn-lg fw-bold py-2">
-                    <i class="bi bi-check2-circle me-1"></i>Check
+            <div class="col-md-3 d-grid">
+                <button type="submit" class="btn btn-primary  fw-bold py-2">
+                    Cek Ruangan
                 </button>
             </div>
         </form>

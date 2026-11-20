@@ -1,30 +1,38 @@
 <section class="container py-4">
-    <!-- Top Header sesuai Mockup 05 -->
-    <div class="bg-white p-4 rounded-4 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
-        <div>
-            <h4 class="fw-bold mb-1">List Permohonan Booking Ruangan</h4>
-            <p class="text-secondary small mb-0">Tinjau dan lakukan persetujuan permohonan fasilitas gereja</p>
+    <div class="bg-white p-3 p-md-4 rounded-4 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+        <div class="d-flex align-items-center gap-3">
+            <div class="brand-icon rounded-circle d-flex align-items-center justify-content-center text-white">
+                <i class="bi bi-list"></i>
+            </div>
+            <div>
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0 small">
+                        <li class="breadcrumb-item"><a href="index.php?page=home" class="text-decoration-none">Home</a></li>
+                        <li class="breadcrumb-item active">List Booking</li>
+                    </ol>
+                </nav>
+                <h5 class="fw-bold mb-0">List Booking Ruangan</h5>
+            </div>
         </div>
-        <a href="index.php?page=rooms" class="btn btn-outline-secondary rounded-pill px-4 fw-semibold">
-            &larr; Kembali ke Katalog
+        <a href="index.php?page=rooms" class="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-semibold">
+            &larr; Kembali ke Home
         </a>
     </div>
-
     <!-- Tabel Daftar Permohonan -->
     <div class="bg-white p-4 rounded-4 border shadow-sm">
         <div class="table-responsive">
-            <table class="table table-hover align-middle mb-0">
+            <table class="table table-hover ">
                 <thead class="table-light">
                     <tr>
-                        <th class="py-3 px-3">Tanggal</th>
-                        <th class="py-3">Ruangan</th>
-                        <th class="py-3">Waktu</th>
-                        <th class="py-3">Nama Kegiatan</th>
-                        <th class="py-3">PIC</th>
-                        <th class="py-3 text-center">Status</th>
+                        <th scope="col">Tanggal</th>
+                        <th scope="col">Nama Ruangan</th>
+                        <th scope="col">Waktu</th>
+                        <th scope="col">Nama Kegiatan</th>
+                        <th scope="col">PIC</th>
+                        <th scope="col">Status</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="align-middle">
                     <?php foreach ($bookings as $b):
                         if ($b['status'] === 'Accepted') {
                             $badgeClass = 'bg-success-subtle text-success border border-success-subtle';
@@ -52,6 +60,7 @@
                     <?php endforeach; ?>
                 </tbody>
             </table>
+
         </div>
     </div>
 </section>

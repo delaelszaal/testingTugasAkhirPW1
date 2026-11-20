@@ -3,7 +3,7 @@
     <div class="bg-white p-3 p-md-4 rounded-4 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
         <div class="d-flex align-items-center gap-3">
             <div class="brand-icon rounded-circle d-flex align-items-center justify-content-center text-white">
-                <i class="bi bi-calendar2-week"></i>
+                <i class="bi bi-list"></i>
             </div>
             <div>
                 <nav aria-label="breadcrumb">
