@@ -1,36 +1,47 @@
 <?php
+$prefillTanggal = isset($_GET['tanggal']) ? $_GET['tanggal'] : '';
+$prefillRuangan = isset($_GET['ruangan']) ? $_GET['ruangan'] : '';
 $selected_id = isset($_GET['id']) && isset($rooms[$_GET['id']]) ? (int)$_GET['id'] : 1;
 $room = $rooms[$selected_id];
+
+$gambarAwal = '';
+foreach ($rooms as $r) {
+    if ($prefillRuangan == $r['nama']) {
+        $gambarAwal = $r['gambar'];
+        break;
+    }
+}
 ?>
 <section class="container py-4">
-    <!-- Breadcrumbs Bar sesuai Mockup 04 -->
-
-    <div class="bg-white p-3 p-md-4 rounded-4 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <!-- BREADCRUMBS -->
+    <div class="bg-white p-2 p-md-3 rounded-3 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
         <div class="d-flex align-items-center gap-3">
-            <div class="brand-icon rounded-circle d-flex align-items-center justify-content-center text-white">
-                <i class="bi bi-calendar2-week"></i>
-            </div>
+
             <div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 small">
-                        <li class="breadcrumb-item"><a href="index.php?page=home" class="text-decoration-none">Home</a></li>
-                        <li class="breadcrumb-item active"><?php echo $room['nama']; ?></li>
+                        <li class="breadcrumb-item"><a href="index.php?page=rooms" class="text-decoration-none">Ruangan-Ruangan</a></li>
+                        <li class="breadcrumb-item active">Booking</li>
                     </ol>
                 </nav>
             </div>
         </div>
-        <a href="index.php?page=rooms" class="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-semibold">
-            &larr; Kembali ke Katalog
+        <a href="index.php?page=home" class="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-semibold">
+            &larr; Kembali ke Home
         </a>
     </div>
     <div class="row g-4">
-        <!-- Kolom Kiri (Preview Gambar & Spesifikasi Ruangan) -->
+        <!-- KOLOM KIRI -->
         <div class="col-lg-8">
-            <div class="bg-white  p-3 rounded-4 border shadow-sm mb-4 ">
-                <i class="bi bi-image  fs-1 mb-1"></i>
-                <span class="small fw-semibold">
-                    <p>[Placeholder]</p>
-                </span>
+            <div id="previewRuangan" class="bg-white p-3 rounded-4 border shadow-sm mb-4 d-flex align-items-center justify-content-center" style="height: 320px;">
+                <?php if ($gambarAwal != ''): ?>
+                    <img src="<?php echo $gambarAwal; ?>" alt="<?php echo $prefillRuangan; ?>" class="rounded-3 w-100 h-100" style="object-fit: cover;">
+                <?php else: ?>
+                    <div class="text-center text-muted">
+                        <i class="bi bi-image fs-1 mb-1 d-block"></i>
+                        <span class="small fw-semibold">Pilih ruangan untuk melihat gambar</span>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div class="bg-white p-4 rounded-4 border shadow-sm">
@@ -53,24 +64,25 @@ $room = $rooms[$selected_id];
             </div>
         </div>
 
-        <!-- Kolom Kanan (Form Pilih Waktu & Book) -->
+        <!-- KOLOM KANAN -->
         <div class="col-lg-4">
-            <div class="bg-white p-4 rounded-4 border shadow-sm sticky-lg-top" style="top: 90px;">
+            <div class="bg-white p-4 rounded-4 border shadow-sm " style="top: 90px;">
                 <h5 class="fw-bold border-bottom pb-3 mb-3">Pilih Waktu & Book</h5>
                 <form id="formBookingRuangan">
                     <div class="mb-3">
                         <label class="form-label fw-semibold small">RUANGAN DIPILIH</label>
-                        <select class="form-select bg-light fw-semibold" id="inputRuangan">
+                        <select id="pilihRuangan" name="ruangan" class="form-select" required>
+                            <option value="" data-gambar="">-- Pilih Ruangan --</option>
                             <?php foreach ($rooms as $id => $r): ?>
-                                <option value="<?php echo $r['nama']; ?>" <?php echo ($id == $selected_id) ? 'selected' : ''; ?>>
-                                    <?php echo $r['nama']; ?>
+                                <option value="<?php echo $r['nama']; ?>" data-gambar="<?php echo $r['gambar']; ?>" <?php echo ($prefillRuangan == $r['nama']) ? 'selected' : ''; ?>>
+                                    <?php echo $r['nama']; ?> (<?php echo $r['kapasitas']; ?>)
                                 </option>
                             <?php endforeach; ?>
                         </select>
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-semibold small">TANGGAL PEMINJAMAN</label>
-                        <input type="date" class="form-control bg-light" id="inputTanggal" value="2026-10-26" required>
+                        <input type="date" name="tanggal" class="form-control" value="<?php echo htmlspecialchars($prefillTanggal); ?>" required>
                     </div>
                     <div class="mb-3">
                         <label class="form-label fw-semibold small">PILIH WAKTU JAM</label>

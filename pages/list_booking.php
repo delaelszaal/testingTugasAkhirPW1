@@ -1,5 +1,5 @@
-<section class="container py-4">
-    <div class="bg-white p-3 p-md-4 rounded-4 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+<section class="container py-2">
+    <div class="bg-white p-2 p-md-3 rounded-3 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
         <div class="d-flex align-items-center gap-3">
             <div class="brand-icon rounded-circle d-flex align-items-center justify-content-center text-white">
                 <i class="bi bi-list"></i>
@@ -11,15 +11,15 @@
                         <li class="breadcrumb-item active">List Booking</li>
                     </ol>
                 </nav>
-                <h5 class="fw-bold mb-0">List Booking Ruangan</h5>
+                <h5 class="fw-bold mb-0">List Booking</h5>
             </div>
         </div>
-        <a href="index.php?page=rooms" class="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-semibold">
+        <a href="index.php?page=home" class="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-semibold">
             &larr; Kembali ke Home
         </a>
     </div>
     <!-- Tabel Daftar Permohonan -->
-    <div class="bg-white p-4 rounded-4 border shadow-sm">
+    <div class="bg-white p-4 rounded-2 border shadow-sm">
         <div class="table-responsive">
             <table class="table table-hover ">
                 <thead class="table-light">

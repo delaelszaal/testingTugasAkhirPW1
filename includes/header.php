@@ -11,18 +11,17 @@ $currentPage = isset($_GET['page']) ? $_GET['page'] : 'home';
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Bootstrap 5 CSS -->
+    <!-- BOOTSTRAP -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
+    <!-- BOOTSTRAP ICON -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
+    <!-- STYLE CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="d-flex flex-column min-vh-100">
-
-    <!-- Navbar Global -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm">
         <div class="container-fluid">
             <a class="navbar-brand ms-2" href="index.php"><strong>GKI Raya Hankam</strong></a>
 
@@ -50,7 +49,7 @@ $currentPage = isset($_GET['page']) ? $_GET['page'] : 'home';
                         <a class="nav-link <?php echo ($currentPage == 'login') ? 'active fw-semibold' : ''; ?>" href="index.php?page=login">Login</a>
                     </li>
                 </ul>
-                <a href="index.php?page=booking" class="btn btn-primary  ms-lg-4">
+                <a href="index.php?page=booking" class="btn btn-primary ms-lg-4">
                     + Booking Sekarang
                 </a>
             </div>

@@ -1,30 +1,28 @@
 <section class="container py-2">
-    <!-- Top Breadcrumb Bar sesuai Mockup 03 -->
-    <div class="bg-white p-3 p-md-4 rounded-4 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
+    <!-- BREADCRUMB -->
+    <div class="bg-white p-2 p-md-3 rounded-3 border shadow-sm d-flex flex-wrap justify-content-between align-items-center gap-3 mb-4">
         <div class="d-flex align-items-center gap-3">
             <div class="brand-icon rounded-circle d-flex align-items-center justify-content-center text-white">
-                <i class="bi bi-calendar"></i>
+                <i class="bi bi-list"></i>
             </div>
             <div>
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb mb-0 small">
                         <li class="breadcrumb-item"><a href="index.php?page=home" class="text-decoration-none">Home</a></li>
-                        <li class="breadcrumb-item active">Kalender</li>
+                        <li class="breadcrumb-item active">Calendar</li>
                     </ol>
                 </nav>
-                <h5 class="fw-bold mb-0">Cek Availbility</h5>
+                <h5 class="fw-bold mb-0">Daftar Ruangan</h5>
             </div>
         </div>
-        <a href="index.php?page=booking" class="btn btn-primary btn-sm rounded-pill px-3 py-2 fw-semibold">
-            <i class="bi bi-plus-circle me-1"></i>Ajukan Peminjaman
+        <a href="index.php?page=home" class="btn btn-outline-secondary btn-sm rounded-pill px-3 fw-semibold">
+            &larr; Kembali ke Home
         </a>
-
     </div>
 
-    <!-- Split Layout 2 Kolom: Kalender di Kiri (7 Kolom), Status Ketersediaan di Kanan (5 Kolom) -->
     <div class="row g-4">
         <div class="col-lg-7">
-            <div class="bg-white p-4 rounded-4 border shadow-sm h-100">
+            <div class="bg-white p-4 rounded-2 border shadow-sm h-100">
                 <div class="d-flex justify-content-between align-items-center mb-4">
                     <div class="d-flex align-items-center gap-3">
                         <div class="bg-primary bg-opacity-10 text-accent p-3 rounded-3 fs-4">
@@ -42,7 +40,7 @@
                     </div>
                 </div>
 
-                <!-- Header Nama Hari -->
+                <!-- HEADER HARI -->
                 <div class="calendar-grid mb-2">
                     <div class="calendar-day-header text-danger">MIN</div>
                     <div class="calendar-day-header">SEN</div>
@@ -53,7 +51,7 @@
                     <div class="calendar-day-header">SAB</div>
                 </div>
 
-                <!-- Matriks Tanggal -->
+                <!-- TANGGAL -->
                 <div class="calendar-grid">
                     <?php for ($d = 1; $d <= 28; $d++):
                         $isDefaultSelected = ($d == 26) ? 'active-date' : '';
@@ -69,7 +67,7 @@
         </div>
 
         <div class="col-lg-5">
-            <div class="bg-white p-4 rounded-4 border shadow-sm h-100">
+            <div class="bg-white p-4 rounded-2 border shadow-sm h-100">
                 <h5 class="fw-bold mb-1">Status Ketersediaan Fasilitas</h5>
                 <p class="small text-accent fw-semibold mb-4 selected-date-text">
                     <i class="bi bi-clock me-1"></i>Tanggal: Senin, 26 Oktober 2026
@@ -87,7 +85,7 @@
                                     <small class="text-secondary selected-date-text">Tanggal: Senin, 26 Oktober 2026</small>
                                 </div>
                             </div>
-                            <a href="index.php?page=booking&id=<?php echo $id; ?>" class="btn btn-dark btn-sm rounded-pill px-3 fw-semibold">
+                            <a href="index.php?page=booking&id=<?php echo $id; ?>" class="btn btn-dark btn-sm rounded-2 px-3 fw-semibold">
                                 + Book
                             </a>
                         </div>

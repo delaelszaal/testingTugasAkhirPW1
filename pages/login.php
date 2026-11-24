@@ -1,7 +1,7 @@
 <section class="auth-section d-flex align-items-center justify-content-center py-3">
     <div class="container">
         <div class="bg-white p-4 p-md-5 rounded border shadow-sm mx-auto" style="max-width: 460px;">
-            <div class="text-center mb-4">
+            <div class="text-center mb-2">
 
                 <h3 class="fw-bold mb-1">Login / Register</h3>
                 <p class="small text-secondary mb-0">Pastikan Anda sudah terdaftar untuk akses booking ruangan.</p>

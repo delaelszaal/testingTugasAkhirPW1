@@ -1,12 +1,12 @@
 <?php
-// Panggil file data dan header menggunakan teknik file include
-require_once 'includes/data.php';
+// TEKNIK INCLUDES (mengambil data header.php & data.php)
+require_once 'includes/data.php'; //require_once menunjukkan jika sudah ada tidak akan diinclude lagi
 include 'includes/header.php';
 
-// Tangkap parameter 'page' dari URL, jika kosong arahkan ke 'home'
+
 $page = isset($_GET['page']) ? $_GET['page'] : 'home';
 
-// Struktur navigasi dengan PHP switch statement
+// NAVIGASI
 switch ($page) {
     case 'home':
         include 'pages/home.php';
@@ -34,5 +34,5 @@ switch ($page) {
         break;
 }
 
-// Panggil footer
+// FOOTER
 include 'includes/footer.php';
